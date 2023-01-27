@@ -3,7 +3,7 @@ import "./error.css";
 
 const Error = () => {
   return (
-    <div className="mainContent">
+    <div className="mainContentERR">
       <h1 data-test-id="text-404">404</h1>
       <p>
         Je crains que vous n'ayez trouvé une page qui n'existe pas sur

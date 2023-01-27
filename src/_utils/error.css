@@ -1,4 +1,4 @@
-.mainContent {
+.mainContentERR {
   background: #131417;
   color: white;
 
@@ -12,7 +12,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.mainContent a {
+.mainContentERR a {
   color: #56bbf9;
   cursor: pointer;
 }
