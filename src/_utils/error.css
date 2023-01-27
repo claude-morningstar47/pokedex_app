@@ -1,0 +1,19 @@
+.mainContent {
+  background: #131417;
+  color: white;
+
+  width: 68%;
+  margin: 0.9rem;
+  padding: 2rem;
+  border-radius: 1.5rem;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.mainContent a {
+  color: #56bbf9;
+  cursor: pointer;
+}
+/*# sourceMappingURL=body.css.map */

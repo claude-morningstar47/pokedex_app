@@ -1,0 +1,71 @@
+/* Colors and Styles (Default) */
+:root {
+  --PrimaryColor: #2565bb;
+  /* --PrimaryColor: hsl(94, 59%, 35%); */
+  --HoverColor: #dbf094;
+  --paleGreen: hsl(96, 75%, 89%);
+  --whiteColor: hsl(0, 0%, 100%);
+  --blackColor: hsl(0, 0%, 18%);
+  --textColor: hsl(240, 1%, 48%);
+  --bgColor: hsl(220, 10%, 94%);
+  --greyText: rgb(190, 190, 190);
+  --inputColor: hsl(330, 12%, 97%);
+  /* font ang Typography */
+  --biggestFontSize: 2.5rem;
+  --h1FontSize: 1.5rem;
+  --h2FontSize: 1.25rem;
+  --h3FontSize: 1rem;
+  --normalFontSize: 0.938rem;
+  --smallFontSize: 0.813rem;
+  --smallestFontSize: 0.75rem;
+}
+
+.login,
+.register {
+  width: 82%;
+  padding: 2rem;
+}
+.login form,
+.register form {
+  box-shadow: 0 2px 4px var(--blackColor);
+  display: grid;
+  margin-top: 2rem;
+  gap: 1rem;
+  border-radius: 1ren;
+}
+.login form h1,
+.register form h1 {
+  margin: 1.5rem;
+  font-size: var(--h1FontSize);
+  color: var(--blackColor);
+  font-weight: 700;
+}
+.login form .group,
+.register form .group {
+  padding: 2rem;
+  border-radius: 1rem;
+}
+.login form .group label,
+.register form .group label {
+  font-weight: 500;
+}
+.login form .group input,
+.register form .group input {
+  box-shadow: 0 2px 4px var(--inputColor);
+  border: none;
+  background: none;
+}
+.login form .group button,
+.register form .group button {
+  box-shadow: none;
+  padding: 0.5rem 1rem;
+  color: var(--PrimaryColor);
+  border-radius: 2px solid transparent;
+}
+.login form .group .link,
+.register form .group .link {
+  box-shadow: none;
+  padding: 0.5rem 1rem;
+  color: var(--PrimaryColor);
+  border-radius: 2px solid transparent;
+}/*# sourceMappingURL=Styles.css.map */
