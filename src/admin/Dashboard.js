@@ -11,9 +11,7 @@ const Dashboard = () => {
         <SideBar />
         <div className="mainContent">
           <Top />
-          {/* <div className="bottom flex">
-       
-          </div> */}
+
           <Outlet />
         </div>
       </div>

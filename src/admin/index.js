@@ -7,3 +7,6 @@ export { default as Top } from "./components/top_section/Top";
 export { default as Body } from "./components/body_section/Body";
 export { default as Listing } from "./components/listing_section/Listing";
 export { default as Activity } from "./components/activity_section/Activity";
+export { default as UserEdit } from "./components/users/UserEdit";
+export { default as UserAdd } from "./components/users/UserAdd";
+export { default as UserList } from "./components/users/UserList";

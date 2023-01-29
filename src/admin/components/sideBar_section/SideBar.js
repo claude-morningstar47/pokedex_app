@@ -9,9 +9,10 @@ import {
   MdOutlinePermContactCalendar,
   MdOutlineCatchingPokemon,
 } from "react-icons/md";
-import { BsCreditCard2Front, BsQuestionCircle, BsTrophy } from "react-icons/bs";
+import { BsCreditCard2Front, BsQuestionCircle } from "react-icons/bs";
 import { AiOutlinePieChart } from "react-icons/ai";
 import { BiTrendingUp } from "react-icons/bi";
+import { HiOutlineUser } from "react-icons/hi";
 import { Link } from "react-router-dom";
 
 const SideBar = () => {
@@ -36,13 +37,6 @@ const SideBar = () => {
           </li>
 
           <li className="listItem">
-            <Link to="./pokemon/index" className="menuLink flex">
-              <MdOutlineCatchingPokemon className="icon" />
-              <span className="smallText">My Pokemons</span>
-            </Link>
-          </li>
-
-          <li className="listItem">
             <Link to="#!" className="menuLink flex">
               <MdOutlineExplore className="icon" />
               <span className="smallText">Explore</span>
@@ -50,9 +44,16 @@ const SideBar = () => {
           </li>
 
           <li className="listItem">
-            <Link to="#!" className="menuLink flex">
-              <BsTrophy className="icon" />
-              <span className="smallText">Products</span>
+            <Link to="./pokemon/" className="menuLink flex">
+              <MdOutlineCatchingPokemon className="icon" />
+              <span className="smallText">My Pokemons</span>
+            </Link>
+          </li>
+
+          <li className="listItem">
+            <Link to="./user/" className="menuLink flex">
+              <HiOutlineUser className="icon" />
+              <span className="smallText">Users</span>
             </Link>
           </li>
         </ul>
