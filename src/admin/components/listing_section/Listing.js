@@ -34,10 +34,7 @@ const Listing = () => {
     <div className="listingSection">
       <div className="heading flex">
         <h1>My Pokemons</h1>
-        <button
-          className="btn flex"
-          onClick={(e) => navigate("./pokemon/index/")}
-        >
+        <button className="btn flex" onClick={(e) => navigate("./pokemon/")}>
           See All
           <BsArrowRightShort className="icon" />
         </button>

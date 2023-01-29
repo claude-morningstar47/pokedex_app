@@ -4,7 +4,7 @@ import { Route, Routes } from "react-router";
 // Imported routes ===>
 import Error from "@/_utils/Error";
 import {
-  Dashboard,
+  // Dashboard,
   PokemonAdd,
   PokemonEdit,
   PokemonList,
@@ -12,14 +12,16 @@ import {
   UserEdit,
   UserList,
   Listing,
+  Body,
 } from ".";
 import AdminLayout from "./AdminLayout";
 
 const AdminRouter = () => {
   return (
     <Routes>
-      <Route index element={<Dashboard />} />
       <Route element={<AdminLayout />}>
+        <Route index element={<Body />} />
+
         <Route path="pokemon">
           <Route path="list" element={<Listing />} />
           <Route index element={<PokemonList />} />

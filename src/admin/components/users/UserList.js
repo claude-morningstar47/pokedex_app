@@ -24,7 +24,7 @@ const UserList = () => {
       <div className="">
         {users.data.map((user) => (
           <div
-            onClick={(e) => navigate(`../edit/${user.id}`)}
+            onClick={(e) => navigate(`./edit/${user.id}`)}
             key={user.id}
             className="singleItem"
           >
