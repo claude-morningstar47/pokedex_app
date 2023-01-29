@@ -20,50 +20,46 @@
   --smallFontSize: 0.813rem;
   --smallestFontSize: 0.75rem;
 }
-// Login
-.login,
-.register {
-  width: 82%;
+
+.AuthPage {
+  width: 80%;
   padding: 2rem;
+  gap: 1rem;
+
+  button {
+    box-shadow: none;
+    padding: 0.5rem 1rem;
+    color: var(--PrimaryColor);
+    border-radius: 2px solid transparent;
+  }
 
   form {
-    box-shadow: 0 2px 4px var(--blackColor);
-    display: grid;
-    margin-top: 2rem;
-    gap: 1rem;
-    border-radius: 1ren;
-
     h1 {
       margin: 1.5rem;
       font-size: var(--h1FontSize);
       color: var(--blackColor);
       font-weight: 700;
     }
-
-    .group {
-      padding: 2rem;
-      border-radius: 1rem;
-
-      label {
-        font-weight: 500;
-      }
+    .err {
+      color: var(--blackColor);
+      font-size: var(--h3FontSize);
+    }
+    .text {
+      padding: 1rem 2rem;
+      background: var(--whiteColor);
+      border-radius: 5px;
+      gap: 1rem;
+      box-shadow: 0 2px 4px var(--inputColor);
 
       input {
-        box-shadow: 0 2px 4px var(--inputColor);
         border: none;
+        outline: none;
         background: none;
       }
-      button {
-        box-shadow: none;
-        padding: 0.5rem 1rem;
-        color: var(--PrimaryColor);
-        border-radius: 2px solid transparent;
-      }
-      .link {
-        box-shadow: none;
-        padding: 0.5rem 1rem;
-        color: var(--PrimaryColor);
-        border-radius: 2px solid transparent;
+
+      label {
+        font-size: var(--h3FontSize);
+        font-weight: 500;
       }
     }
   }

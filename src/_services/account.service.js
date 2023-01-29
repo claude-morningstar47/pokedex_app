@@ -1,11 +1,11 @@
 import Axios from "./caller.service";
 
-let login = (credentials) => {
-  return Axios.post("/api/login", credentials);
+let login = (data, config) => {
+  return Axios.post("/api/login", data, config);
 };
 
-let register = (credentials) => {
-  return Axios.post("/api/register", credentials);
+let register = (data, config) => {
+  return Axios.post("/api/register", data, config);
 };
 
 let saveToken = (token) => {
@@ -18,7 +18,6 @@ let logout = () => {
 
 let isLogged = () => {
   let token = localStorage.getItem("token");
-
   return !!token;
 };
 

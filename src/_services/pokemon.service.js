@@ -1,13 +1,13 @@
 import Axios from "./caller.service";
 
-// let getAllPokemons = async () => {
-//   const { data } = await Axios.get("/api/pokemons");
-//   return data;
-// };
-
-let getAllPokemons = () => {
-  return Axios.get("/api/pokemons");
+let getAllPokemons = async () => {
+  const { data } = await Axios.get("/api/pokemons");
+  return data;
 };
+
+// let getAllPokemons = () => {
+//   return Axios.get("/api/pokemons");
+// };
 
 // let getPokemon = async (uid) => {
 //   const { data } = await Axios.get("/api/pokemons/" + uid);

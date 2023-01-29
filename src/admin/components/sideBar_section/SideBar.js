@@ -5,9 +5,9 @@ import logo from "@/assets/logo/pikachu.png";
 // Imported Icons ====>
 import { IoMdSpeedometer } from "react-icons/io";
 import {
-  MdDeliveryDining,
   MdOutlineExplore,
   MdOutlinePermContactCalendar,
+  MdOutlineCatchingPokemon,
 } from "react-icons/md";
 import { BsCreditCard2Front, BsQuestionCircle, BsTrophy } from "react-icons/bs";
 import { AiOutlinePieChart } from "react-icons/ai";
@@ -36,9 +36,9 @@ const SideBar = () => {
           </li>
 
           <li className="listItem">
-            <Link to="#!" className="menuLink flex">
-              <MdDeliveryDining className="icon" />
-              <span className="smallText">My Orders</span>
+            <Link to="./pokemon/index" className="menuLink flex">
+              <MdOutlineCatchingPokemon className="icon" />
+              <span className="smallText">My Pokemons</span>
             </Link>
           </li>
 

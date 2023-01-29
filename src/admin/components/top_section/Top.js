@@ -26,7 +26,7 @@ const Top = () => {
     <div className="topSection">
       <div className="headerSection flex">
         <div className="title">
-          <h1>Welcome to Mopeno.</h1>
+          <h1>Welcome to Pokedex.</h1>
           <p>hello Claude, Welcome back!</p>
         </div>
 

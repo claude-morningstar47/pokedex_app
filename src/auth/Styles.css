@@ -20,52 +20,40 @@
   --smallestFontSize: 0.75rem;
 }
 
-.login,
-.register {
-  width: 82%;
+.AuthPage {
+  width: 80%;
   padding: 2rem;
-}
-.login form,
-.register form {
-  box-shadow: 0 2px 4px var(--blackColor);
-  display: grid;
-  margin-top: 2rem;
   gap: 1rem;
-  border-radius: 1ren;
 }
-.login form h1,
-.register form h1 {
+.AuthPage button {
+  box-shadow: none;
+  padding: 0.5rem 1rem;
+  color: var(--PrimaryColor);
+  border-radius: 2px solid transparent;
+}
+.AuthPage form h1 {
   margin: 1.5rem;
   font-size: var(--h1FontSize);
   color: var(--blackColor);
   font-weight: 700;
 }
-.login form .group,
-.register form .group {
-  padding: 2rem;
-  border-radius: 1rem;
+.AuthPage form .err {
+  color: var(--blackColor);
+  font-size: var(--h3FontSize);
 }
-.login form .group label,
-.register form .group label {
-  font-weight: 500;
-}
-.login form .group input,
-.register form .group input {
+.AuthPage form .text {
+  padding: 1rem 2rem;
+  background: var(--whiteColor);
+  border-radius: 5px;
+  gap: 1rem;
   box-shadow: 0 2px 4px var(--inputColor);
+}
+.AuthPage form .text input {
   border: none;
+  outline: none;
   background: none;
 }
-.login form .group button,
-.register form .group button {
-  box-shadow: none;
-  padding: 0.5rem 1rem;
-  color: var(--PrimaryColor);
-  border-radius: 2px solid transparent;
-}
-.login form .group .link,
-.register form .group .link {
-  box-shadow: none;
-  padding: 0.5rem 1rem;
-  color: var(--PrimaryColor);
-  border-radius: 2px solid transparent;
+.AuthPage form .text label {
+  font-size: var(--h3FontSize);
+  font-weight: 500;
 }/*# sourceMappingURL=Styles.css.map */

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React from "react";
 import "./listing.css";
 // Imported Icons ====>
 import { BsArrowRightShort } from "react-icons/bs";
@@ -12,40 +12,41 @@ import user_4 from "@/assets/images/image_8.jpg";
 // Imported Functions ====>
 import { pokemonService } from "@/_services";
 import { useNavigate } from "react-router-dom";
+import { useQuery } from "react-query";
 
 const Listing = () => {
-  const flag = useRef(false);
-  const [pokemons, setPokemons] = useState([]);
   let navigate = useNavigate();
 
-  //useEffect stop double appel
-  useEffect(() => {
-    if (flag.current === false) {
-      pokemonService
-        .getAllPokemons()
-        .then((res) => {
-          setPokemons(res.data.data);
-          console.log(res.data.data);
-        })
-        .catch((err) => console.log(err));
-    }
-    return () => (flag.current = true);
-  }, []);
+  const { isLoading, isError, error, data } = useQuery("pokemons", () =>
+    pokemonService.getAllPokemons()
+  );
+  const pokemons = data;
+
+  if (isError) {
+    return <div>Error: {error.message}</div>;
+  }
+
+  if (isLoading) {
+    return <div>Loading ....</div>;
+  }
 
   return (
     <div className="listingSection">
       <div className="heading flex">
         <h1>My Pokemons</h1>
-        <button className="btn flex">
+        <button
+          className="btn flex"
+          onClick={(e) => navigate("./pokemon/index/")}
+        >
           See All
           <BsArrowRightShort className="icon" />
         </button>
       </div>
 
       <div className="secContainer flex">
-        {pokemons.map((pokemon) => (
+        {pokemons.data.slice(0, 6).map((pokemon) => (
           <div
-            onClick={(e) => navigate(`../edit/${pokemon.id}`)}
+            onClick={(e) => navigate(`./pokemon/edit/${pokemon.id}`)}
             key={pokemon.id}
             className="singleItem"
           >

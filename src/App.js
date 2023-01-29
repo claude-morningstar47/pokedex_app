@@ -1,8 +1,8 @@
 import "./App.css";
-import { Route, Routes } from "react-router";
 // Imported Routes ===>
-import PublicRouter from "@/components/public/PublicRouter";
-import AdminRouter from "@/components/admin/AdminRouter";
+import { Route, Routes } from "react-router";
+import PublicRouter from "@/public/PublicRouter";
+import AdminRouter from "@/admin/AdminRouter";
 import AuthRouter from "@/auth/AuthRouter";
 import AuthGuard from "@/_helpers/AuthGuard";
 

@@ -1,8 +1,8 @@
 import React from "react";
 import { Route, Routes } from "react-router";
 
-import LayoutPublic from "./LayoutPublic";
-import { Home, Show, Contact, About } from "@/pages/public";
+import LayoutPublic from "./pages/LayoutPublic";
+import { Home, Show, Contact, About } from "@/public";
 import Error from "@/_utils/Error";
 
 const PublicRouter = () => {
