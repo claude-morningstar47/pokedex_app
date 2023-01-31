@@ -14,20 +14,20 @@ let getAllPokemons = async () => {
 //   return data;
 // };
 
-let getPokemon = (uid) => {
-  return Axios.get("/api/pokemons/" + uid);
+let getPokemon = (id) => {
+  return Axios.get("/api/pokemons/" + id);
 };
 
-let addPokemon = (pokemon) => {
-  return Axios.post("/api/pokemons/", pokemon);
+let addPokemon = async (pokemon) => {
+  return await Axios.post("/api/pokemons/", pokemon);
 };
 
-let updatePokemon = (pokemon) => {
-  return Axios.put("/api/pokemons/" + pokemon.id, pokemon);
+let updatePokemon = async (pokemon) => {
+  return await Axios.put("/api/pokemons/" + pokemon.id, pokemon);
 };
 
-let deletePokemon = (uid) => {
-  return Axios.delete("/api/pokemons/" + uid);
+let deletePokemon = async (uid) => {
+  return await Axios.delete("/api/pokemons/" + uid);
 };
 
 export const pokemonService = {
