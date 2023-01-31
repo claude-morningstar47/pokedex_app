@@ -14,18 +14,18 @@ Axios.interceptors.request.use((request) => {
   return request;
 });
 
-// Axios.interceptors.response.use(
-//   (response) => {
-//     return response;
-//   },
-//   (error) => {
-//     if (error.response.status === 401 || 404) {
-//       accountService.logout();
-//       window.location = "/auth";
-//     } else {
-//       return Promise.reject(error);
-//     }
-//   }
-// );
+Axios.interceptors.response.use(
+  (response) => {
+    return response;
+  },
+  (error) => {
+    if (error.response.status === 401 || 404) {
+      accountService.logout();
+      window.location = "/auth";
+    } else {
+      return Promise.reject(error);
+    }
+  }
+);
 
 export default Axios;

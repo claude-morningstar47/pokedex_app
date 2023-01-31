@@ -9,20 +9,20 @@ let register = (data, config) => {
 };
 
 let saveToken = (token) => {
-  localStorage.setItem("token", token);
+  localStorage.setItem("authToken", token);
 };
 
 let logout = () => {
-  localStorage.removeItem("token");
+  localStorage.removeItem("authToken");
 };
 
 let isLogged = () => {
-  let token = localStorage.getItem("token");
+  let token = localStorage.getItem("authToken");
   return !!token;
 };
 
 let getToken = () => {
-  return localStorage.getItem("token");
+  return localStorage.getItem("authToken", "your-token-here");
 };
 
 export const accountService = {

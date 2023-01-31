@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react";
 import { accountService } from "@/_services";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
+// import GoogleLogin from "./GoogleLogin";
 
 const LoginPage = () => {
   const navigate = useNavigate();
@@ -8,6 +9,7 @@ const LoginPage = () => {
   const passwordRef = useRef(null);
 
   const [errors, setErrors] = useState({});
+  const location = useLocation();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -37,6 +39,7 @@ const LoginPage = () => {
           .then((result) => {
             accountService.saveToken(result.data.token);
             navigate("/admin", { replace: true });
+            console.log(location);
           })
           .catch((err) => {
             setErrors(err.response.data);
@@ -48,28 +51,31 @@ const LoginPage = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <h1>Login Page</h1>
-      <div className="err">{errors.message && <h3>{errors.message}</h3>}</div>
-      <div className="text flex">
-        <label htmlFor="username">Username:</label>
-        <input
-          type="text"
-          name="username"
-          ref={usernameRef}
-          placeholder="Username"
-        />
+    <>
+      <form onSubmit={handleSubmit}>
+        <h1>Login Page</h1>
+        <div className="err">{errors.message && <h3>{errors.message}</h3>}</div>
+        <div className="text flex">
+          <label htmlFor="username">Username:</label>
+          <input
+            type="text"
+            name="username"
+            ref={usernameRef}
+            placeholder="Username"
+          />
 
-        <label htmlFor="password">Password:</label>
-        <input
-          type="password"
-          name="password"
-          ref={passwordRef}
-          placeholder="Password"
-        />
-      </div>
-      <button type="submit">Login</button>
-    </form>
+          <label htmlFor="password">Password:</label>
+          <input
+            type="password"
+            name="password"
+            ref={passwordRef}
+            placeholder="Password"
+          />
+        </div>
+        <button type="submit">Login</button>
+      </form>
+      {/* <GoogleLogin /> */}
+    </>
   );
 };
 

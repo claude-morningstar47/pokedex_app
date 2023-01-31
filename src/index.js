@@ -8,15 +8,15 @@ import { ReactQueryDevtools } from "react-query/devtools";
 import { BrowserRouter } from "react-router-dom";
 
 const queryClient = new QueryClient({
-  // defaultOptions: {
-  //   queries: {
-  //     refetchOnWindowFocus: false,
-  //     refetchOnMount: false,
-  //     refetchOnReconnect: false,
-  //     retry: false,
-  //     staleTime: 5 * 60 * 1000,
-  //   },
-  // },
+  defaultOptions: {
+    queries: {
+      refetchOnWindowFocus: false,
+      refetchOnMount: false,
+      refetchOnReconnect: false,
+      retry: false,
+      staleTime: 5 * 60 * 1000,
+    },
+  },
 });
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
