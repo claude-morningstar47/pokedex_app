@@ -22,7 +22,7 @@ const UserList = () => {
     <div className="mainContent grid">
       PokemonList
       <div className="">
-        {users.data.map((user) => (
+        {users.data.data.map((user) => (
           <div
             onClick={(e) => navigate(`./edit/${user.id}`)}
             key={user.id}
