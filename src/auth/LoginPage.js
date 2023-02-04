@@ -40,6 +40,7 @@ const LoginPage = () => {
             accountService.saveToken(result.data.token);
             navigate("/admin", { replace: true });
             console.log(location);
+            console.log(result);
           })
           .catch((err) => {
             setErrors(err.response.data);
