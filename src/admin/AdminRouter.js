@@ -23,6 +23,7 @@ const AdminRouter = () => {
         <Route index element={<Body />} />
 
         <Route path="pokemon">
+          7
           <Route path="list" element={<Listing />} />
           <Route index element={<PokemonList />} />
           <Route path="add" element={<PokemonAdd />} />

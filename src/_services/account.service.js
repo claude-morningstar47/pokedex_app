@@ -16,7 +16,7 @@ let logout = () => {
   localStorage.removeItem("authToken");
 };
 
-let isLogged = () => {
+let isLoggedIn = () => {
   let token = localStorage.getItem("authToken");
   return !!token;
 };
@@ -28,8 +28,21 @@ let getToken = () => {
 export const accountService = {
   saveToken,
   logout,
-  isLogged,
+  isLoggedIn,
   login,
   register,
   getToken,
 };
+
+// import Axios from "./caller.service";
+
+// const accountService = {
+//   saveToken: (token) => localStorage.setItem("authToken", token),
+//   logout: () => localStorage.removeItem("authToken"),
+//   isLogged: () => localStorage.getItem("authToken") !== null,
+//   login: (data, config) => Axios.post("/api/login", data, config),
+//   register: (data, config) => Axios.post("/api/register", data, config),
+//   getToken: () => localStorage.getItem("authToken"),
+// };
+
+// export default accountService;

@@ -7,11 +7,9 @@ import { AiFillHeart } from "react-icons/ai";
 
 const PokemonList = () => {
   let navigate = useNavigate();
-
   const { isLoading, isError, error, data } = useQuery("pokemons", () =>
     pokemonService.getAllPokemons()
   );
-  const pokemons = data;
 
   if (isError) {
     return <div>Error: {error.message}</div>;
@@ -24,7 +22,7 @@ const PokemonList = () => {
     <div className="mainContent grid">
       PokemonList
       <div className="">
-        {pokemons.data.map((pokemon) => (
+        {data.data.map((pokemon) => (
           <div
             onClick={(e) => navigate(`../edit/${pokemon.id}`)}
             key={pokemon.id}

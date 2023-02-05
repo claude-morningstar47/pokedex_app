@@ -8,24 +8,22 @@ const Axios = axios.create({
 // Intercepteur de token
 
 Axios.interceptors.request.use((request) => {
-  if (accountService.isLogged()) {
+  if (accountService.isLoggedIn()) {
     request.headers.Authorization = "Bearer " + accountService.getToken();
   }
   return request;
 });
 
-Axios.interceptors.response.use(
-  (response) => {
-    return response;
-  },
-  (error) => {
-    if (error.response.status === 401 || 404) {
-      accountService.logout();
-      window.location = "/auth";
-    } else {
-      return Promise.reject(error);
-    }
-  }
-);
+// Axios.interceptors.response.use(
+//   (response) => response,
+//   (error) => {
+//     if (error.response.status === 401) {
+//       accountService.logout();
+//       window.location = "/auth";
+//     } else {
+//       return Promise.reject(error);
+//     }
+//   }
+// );
 
 export default Axios;

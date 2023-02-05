@@ -1,23 +1,20 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { userService } from "@/_services";
 import { useQuery } from "react-query";
+import { userService } from "@/_services";
 
 const UserList = () => {
-  let navigate = useNavigate();
+  const navigate = useNavigate();
+  const {
+    isLoading,
+    isError,
+    error,
+    data: users,
+  } = useQuery("users", () => userService.getAllUsers());
 
-  const { isLoading, isError, error, data } = useQuery("users", () =>
-    userService.getAllUsers()
-  );
-  const users = data;
+  if (isLoading) return <div>Loading ....</div>;
+  if (isError) return <div>Error: {error.message}</div>;
 
-  if (isError) {
-    return <div>Error: {error.message}</div>;
-  }
-
-  if (isLoading) {
-    return <div>Loading ....</div>;
-  }
   return (
     <div className="mainContent grid">
       PokemonList
