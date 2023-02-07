@@ -6,7 +6,6 @@ const Axios = axios.create({
 });
 
 // Intercepteur de token
-
 Axios.interceptors.request.use((request) => {
   if (accountService.isLoggedIn()) {
     request.headers.Authorization = "Bearer " + accountService.getToken();

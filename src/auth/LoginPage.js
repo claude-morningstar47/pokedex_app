@@ -76,6 +76,7 @@ const LoginPage = () => {
 
           <label htmlFor="password">Password:</label>
           <input
+            spellCheck="false"
             type="password"
             name="password"
             ref={passwordRef}
