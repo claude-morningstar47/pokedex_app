@@ -21,10 +21,10 @@ const PokemonList = () => {
   return (
     <div className="mainContent grid">
       PokemonList
-      <div className="">
+      <div className="secContainer flex">
         {data.data.map((pokemon) => (
           <div
-            onClick={(e) => navigate(`../edit/${pokemon.id}`)}
+            onClick={(e) => navigate(`../pokemon/edit/${pokemon.id}`)}
             key={pokemon.id}
             className="singleItem"
           >
