@@ -4,7 +4,6 @@ import { Route, Routes } from "react-router";
 // Imported routes ===>
 import Error from "@/_utils/Error";
 import {
-  // Dashboard,
   PokemonAdd,
   PokemonEdit,
   PokemonList,
