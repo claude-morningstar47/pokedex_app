@@ -43,7 +43,7 @@ const Listing = () => {
       <div className="secContainer flex">
         {pokemons.data.slice(0, 6).map((pokemon) => (
           <div
-            onClick={(e) => navigate(`./pokemon/edit/${pokemon.id}`)}
+            onClick={() => navigate(`./pokemon/edit/${pokemon.id}`)}
             key={pokemon.id}
             className="singleItem"
           >
