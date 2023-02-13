@@ -1,0 +1,18 @@
+.carousel {
+  display: flex;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  max-width: 100%;
+}
+.slide {
+  flex-shrink: 0;
+  scroll-snap-align: start;
+  width: 300px;
+  margin-right: 20px;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36px;
+  color: white;
+}
