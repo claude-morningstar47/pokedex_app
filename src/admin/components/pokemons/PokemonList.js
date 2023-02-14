@@ -21,27 +21,24 @@ const PokemonList = () => {
   }
   return (
     <div className="mainContent grid">
-      <div className="carousel">
-        PokemonList
-        <div className="secContainer flex">
-          {data.data.map((pokemon) => (
-            <div className="slide">
-              <div
-                onClick={() => navigate(`../pokemon/edit/${pokemon.id}`)}
-                key={pokemon.id}
-                className="singleItem"
-              >
-                <AiFillHeart className="icon" />
-                <img src={pokemon.picture} alt={pokemon.name} />
-                <h2>{pokemon.name}</h2>
-                <h2>{pokemon.cp}</h2>
-                <h2>{pokemon.hp}</h2>
-                <h3>{pokemon.types.join(", ")}</h3>
-                <h2>{pokemon.created}</h2>
-              </div>
-            </div>
-          ))}
-        </div>
+      PokemonList
+      <div className="secContainer flex">
+        {data.data.map((pokemon) => (
+          <div
+            onClick={() => navigate(`../pokemon/edit/${pokemon.id}`)}
+            key={pokemon.id}
+            className="singleItem "
+          >
+            <AiFillHeart className="icon" />
+            <img src={pokemon.picture} alt={pokemon.name} />
+            <h2>{pokemon.name}</h2>
+            <h2>{pokemon.cp}</h2>
+            <h2>{pokemon.hp}</h2>
+            <h3>{pokemon.types.join(", ")}</h3>
+            <h2>{pokemon.created}</h2>
+            <br />
+          </div>
+        ))}
       </div>
     </div>
   );
