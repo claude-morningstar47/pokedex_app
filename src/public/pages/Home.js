@@ -6,6 +6,7 @@ const Home = () => {
     <div>
       Home
       <Link to="/admin">Admin</Link>
+      <h1>Welcome to my App Pokedex</h1>
     </div>
   );
 };
