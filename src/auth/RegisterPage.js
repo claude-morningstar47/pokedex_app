@@ -9,7 +9,7 @@ const RegisterPage = () => {
   const { username, password, confirmPassword } = credentials;
   const [errors, setErrors] = useState({});
 
-  // onChange
+  // onChange zéro 
   const onChange = (e) => {
     setCredentials({
       ...credentials,
