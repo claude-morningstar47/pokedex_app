@@ -12,7 +12,7 @@ const Error = () => {
       </p>
       <p>
         Désolé pour ça. Nous avons consigné l'erreur pour examen, au cas où ce
-        serait de notre faute.
+        serait de notre faute. merci 
       </p>
       <ul>
         <li>
